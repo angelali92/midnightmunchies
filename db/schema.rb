@@ -11,56 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807011648) do
+ActiveRecord::Schema.define(version: 20140808223936) do
 
-  create_table "eateries", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "lat_long"
-    t.integer  "phone_num"
-    t.string   "hours"
-    t.string   "image_url"
-    t.integer  "cost"
-    t.integer  "rating"
-    t.string   "type_food"
-    t.string   "reviews"
-    t.string   "pop_items"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-  end
-
-  add_index "eateries", ["user_id"], name: "index_eateries_on_user_id"
-
-  create_table "sqlite_sp_functions", id: false, force: true do |t|
-    t.text "name"
-    t.text "text"
-  end
-
-# Could not dump table "sqlite_stat1" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
-# Could not dump table "sqlite_stat4" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
-  create_table "sqlite_vs_links_names", id: false, force: true do |t|
-    t.text "name"
-    t.text "alias"
-  end
-
-  create_table "sqlite_vs_properties", id: false, force: true do |t|
-    t.text "parentType"
-    t.text "parentName"
-    t.text "propertyName"
-    t.text "propertyValue"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password"
-    t.string   "default_loc"
-    t.string   "default_latlong"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
