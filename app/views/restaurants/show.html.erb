@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <strong>Lat long:</strong>
+  <%= @restaurant.lat_long %>
+</p>
+
+<p>
+  <strong>Phone num:</strong>
+  <%= @restaurant.phone_num %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @restaurant.hours %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @restaurant.image_url %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @restaurant.website %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @restaurant.cost %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @restaurant.rating %>
+</p>
+
+<p>
+  <strong>Type food:</strong>
+  <%= @restaurant.type_food %>
+</p>
+
+<p>
+  <strong>Drive thru:</strong>
+  <%= @restaurant.drive_thru %>
+</p>
+
+<p>
+  <strong>Delivery:</strong>
+  <%= @restaurant.delivery %>
+</p>
+
+<p>
+  <strong>Market:</strong>
+  <%= @restaurant.market %>
+</p>
+
+<p>
+  <strong>Reviews:</strong>
+  <%= @restaurant.reviews %>
+</p>
+
+<p>
+  <strong>Pop items:</strong>
+  <%= @restaurant.pop_items %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>
