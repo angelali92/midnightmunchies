@@ -1,1 +1,0 @@
-json.extract! @eatery, :id, :name, :address, :lat_long, :phone_num, :hours, :image_url, :website, :cost, :rating, :type_food, :drive_thru, :delivery, :market, :reviews, :pop_items, :created_at, :updated_at

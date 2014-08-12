@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>MMApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<%= yield %>
+	
+		<nav class="navbar navbar-inverse" role="navigation"></nav>
+		
+		<div class="page-wrap">
+			<%= yield %>
+		</div>
+
+		<footer class="site-footer">
+		  I'm the Sticky Footer.
+		</footer>
+
 
 </body>
+
 </html>

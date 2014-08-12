@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :eateries
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-      get 'users' => 'users#index'
+      get 'eateries' => 'eateries#index'
+      get 'eateries/new' => 'eateries#new'
+      post 'eateries' => 'eateries#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
