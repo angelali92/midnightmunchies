@@ -40,3 +40,4 @@ gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
