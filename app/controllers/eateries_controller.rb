@@ -3,6 +3,11 @@ class EateriesController < ApplicationController
 		@eateries = Eatery.all
 	end
 
+	def show	
+		@eateries = Eatery.all
+	end
+
+
 	def new
 		@eatery = Eatery.new
 	end

@@ -8,7 +8,8 @@ Rails.application.routes.draw do
       # get 'eateries/new' => 'eateries#new'
       # post 'eateries' => 'eateries#create'
 
-      resource :eateries
+      resources :eateries
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
