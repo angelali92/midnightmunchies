@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       get 'eateries' => 'eateries#index'
       get 'eateries/new' => 'eateries#new'
       post 'eateries' => 'eateries#create'
+
+      resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
