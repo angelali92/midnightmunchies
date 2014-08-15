@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   #root 'eateries#index'
   # You can have the root of your site routed with "root"
 
-      resources :eateries
-      #resources :users
+  resources :eateries
+  #resources :users
 
   root 'sessions#new'
   get 'signup' => 'users#new', as: :signup
