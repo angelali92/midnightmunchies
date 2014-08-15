@@ -4,7 +4,7 @@ class EateriesController < ApplicationController
 	end
 
 	def show	
-		@eateries = Eatery.all
+		@eatery = Eatery.find(params[:id])
 	end
 
 
@@ -42,9 +42,8 @@ class EateriesController < ApplicationController
   	redirect_to eateries_path
    end
 
-
 	private
 		def eatery_params
-			params.require(:eatery).permit(:name, :address, :lat_long, :phone_num, :hours, :image_url, :website, :cost, :rating, :type_food, :drive_thru, :delivery, :market, :reviews, :pop_items)
+			params.require(:eatery).permit(:name, :address, :lat, :long, :phone_num, :hours, :image_url, :website, :rating, :drive_thru)
 end
 end
