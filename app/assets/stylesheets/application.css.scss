@@ -14,8 +14,6 @@
  *= require_self
  */
 
-@import url(http://fonts.googleapis.com/css?family=Bangers);
-
 * {
 	margin: 0;
 }
@@ -45,6 +43,6 @@ html, body {
 	background: gray;
 }
 
-.main {
-  	font-family: 'Bangers', cursive;
- }
+.headers {
+	display: inline-block;
+}

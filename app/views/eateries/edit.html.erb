@@ -1,5 +1,35 @@
-<h1>Edit </h1>
+<h1>Edit </h1> 
+
+ 
+
+<h1>Edit Eatery</h1>
+<%= form_for @eatery do |f| %>
+	<%= f.label :name %> <br/>
+	<%= f.text_field :name %> <br/>
+	<%= f.label :image_url %> <br/>
+	<%= f.text_field :image_url %> <br/>
+	<%= f.label :address %> <br/>
+	<%= f.text_field :address %> <br/>
+	<%= f.label :phone_num %> <br/>
+	<%= f.text_field :phone_num %> <br/>
+	<%= f.label :website %> <br/>
+	<%= f.number_field :website %> <br/>
+	<%= f.label :rating %> <br/>
+	<%= f.number_field :rating %> <br/>
+	<%= f.label :drive_thru %> <br/>
+	<%= f.text_field :drive_thru %> <br/>
+	<%= f.label :lobby_hours %> <br/>
+	<%= f.text_field :lobby_hours%> <br/>
+	<%= f.label :lat %> <br/>
+	<%= f.text_field :lat %> <br/>
+	<%= f.label :long %> <br/>
+	<%= f.text_field :long %> <br/>
+	<%= f.submit "Change the Eatery" %>
+
+<%end %>
+
 
 <%= link_to "Index", eateries_path %>
 <%= link_to "Delete", @eatery, method: "delete" %> 
 <%= link_to "New", new_eatery_path %>
+

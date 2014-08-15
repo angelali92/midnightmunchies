@@ -3,6 +3,8 @@
 <%= form_for @eatery do |f| %>
   <%= f.label :name %>:
   <%= f.text_field :name %><br/>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %> <br/>
   <%= f.label :address %>:
   <%= f.text_field :address %><br/>
   <%= f.label :lat %>:
@@ -26,7 +28,7 @@
 <% end %>
 
 
-
+ 
 
 <%= link_to "Index", eateries_path %>
 
