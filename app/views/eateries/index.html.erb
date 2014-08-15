@@ -1,5 +1,5 @@
 
-<h1> Eateries </h1>
+<h1> Eateries </h1> 
 
 <table>
   <thead>
@@ -29,10 +29,13 @@
         <td><%= eatery.rating %></td>
         <td><%= eatery.drive_thru %></td>
         <td><%= eatery.lobby_hours %></td>
+        <%= link_to "Eatery Profile", eatery %>
+        <%= link_to "Edit", edit_eatery_path(eatery) %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
   
+  <%= link_to "New", new_eatery_path %>
 
