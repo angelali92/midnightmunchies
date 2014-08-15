@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+# For heroku
+gem 'rails_12factor'
+gem 'ruby', '2.1.2'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 #gem 'spring',        group: :development
 
