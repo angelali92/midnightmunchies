@@ -42,3 +42,6 @@ ruby "2.1.2"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# For heroku
+gem 'rails_12factor', group: :production
+ruby '2.1.2'
