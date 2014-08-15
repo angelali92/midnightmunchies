@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
 * {
 	margin: 0;
 }
@@ -41,4 +43,17 @@ html, body {
 
 .site-footer {
 	background: gray;
+	height: 100px;
+	width: 1905px;
+    margin-left: -50px;
+}
+.settings{
+	margin-top: 2px;
+	margin-left: 1800px;
+}
+.logo{
+	margin-left: 100px;
+}
+.bar{
+	text-align: center;
 }

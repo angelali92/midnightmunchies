@@ -8,77 +8,40 @@
     <thead>
       <title>Midnight Munchies</title>
       
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-        <!-- Latest compiled and minified JavaScript -->
-       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-       
        <div class="search"> 
             <form class="navbar-form navbar-left" role="Enter Location">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Location">
             </div>
           </form>
-       </div> 
-                        <nav class="box">
+   </div> 
+      <nav class="box">
 
+            <br>
 
-                              <div class="email"> 
-                                        <form class="navbar-form navbar-left" role="Enter Location">
-                                        <div class="form-group">
-                                          <input type="text" class="form-control" placeholder="Enter Location">
-                                        </div>
-                                      </form>
-                                   </div> 
-                        </nav>
+            <div class="email"> 
+                      <form class="navbar-form navbar-left" role="Enter Email">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Email">
+                      </div>
+                    </form>
+                 </div> 
 
+            <div class="Password"> 
+                      <form class="navbar-form navbar-left" role="Enter Email">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Password">
+                      </div>
+                    </form>
+                 </div> 
+                 <button class="button">Sign Up</button> 
+        <button class="button2">Sign Up</button> 
+</nav>
   <style type="text/css">
-  body{
-    background-color: #474747
-  }
+
 </style>   
     
        <h1> Eateries </h1> 
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Phone Number</th>
-      <th>Website</th>
-      <th>Rating</th>
-      <th>Drive Thru</th>
-      <th>Lobby Hours</th>
-      <th>Lat</th>
-      <th>Long</th>
-      <th colspan="9"></th>   
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @eateries.each do |eatery| %>
-      <tr>
-        <td><%= eatery.name %></td>
-        <td><%= eatery.address %></td>
-        <td><%= eatery.lat %></td>
-        <td><%= eatery.long %></td>
-        <td><%= eatery.phone_num %></td>
-        <td><%= eatery.website %></td>
-        <td><%= eatery.rating %></td>
-        <td><%= eatery.drive_thru %></td>
-        <td><%= eatery.lobby_hours %></td>
-        <%= link_to "Eatery Profile", eatery %>
-        <%= link_to "Edit", edit_eatery_path(eatery) %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-    <%= link_to "New", new_eatery_path %>
+    <div class="push"><%= link_to "New", new_eatery_path %></div>
 <html>

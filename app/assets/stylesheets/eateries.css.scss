@@ -16,10 +16,12 @@
         padding-bottom: 150px;  
         }
 
-      .navbar{
+      .navbar{  
         background-color: #f88c43;
-        height: 100px;
+        height: 125px;
         width: 100%;
+        font-family: Gloria Hallelujah;
+        font-size: 45px;
       }
       .box{
         background-color: #77787e;
@@ -31,7 +33,28 @@
         margin-right: auto;
       }
       .email{
-        margin-left: 29%;
-        width: 800px;
-        padding-bottom: 150px;  
+        margin-left: 50px;
+        width: 300px;
+      }
+      .button{
+        height: 50px;
+        border-radius: 1px;
+        width: 100px;
+        margin-left: 60px;
+        background-color: #d48653;
+        font-size: 20px; 
+      }
+      .Password{
+        margin-left: 50px;
+        width: 300px;
+        padding-bottom: 60px;
+      }
+
+      .button2{
+        height: 50px;
+        border-radius: 1px;
+        width: 100px;
+        margin-left: 70px;
+        background-color: #d48653;
+        font-size: 20px; 
       }
