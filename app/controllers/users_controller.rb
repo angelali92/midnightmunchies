@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
-	end
 
 	def new
 	    @user = User.new
@@ -18,22 +17,32 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			@users = User.all
-			render action: 'index'
+			render action: 'show'
 		else
 			render action: 'new'
 		end
 	end
 
 	def edit
-	end
-
-	def destroy
-	    @user = User.find(params[:id])
-	    @user.destroy
-	    redirect_to 'index'
+		@user = User.find(params[:id])
 	end
 
 	def update
+		@user = User.find(params[:id])
+	    if @user.update_attributes(user_params)
+	      render action: 'show'
+	    else
+	      render 'edit'
+	    end
+	end
+
+	def destroy
+		@user = User.find(params[:id])
+		if @user.destroy
+			redirect_to action: 'index'
+		else
+			render action: 'show'
+		end
 	end
 
 	private
