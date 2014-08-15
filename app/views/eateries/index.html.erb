@@ -2,11 +2,11 @@
   <table>
     
     
-  
+   
 
 
     <thead>
-      <title>Midnight Munchies</title>
+      <title class="main">Midnight Munchies</title>
       
        <div class="search"> 
             <form class="navbar-form navbar-left" role="Enter Location">
@@ -14,6 +14,7 @@
               <input type="text" class="form-control" placeholder="Enter Location">
             </div>
           </form>
+
    </div> 
       <nav class="box">
 
@@ -37,11 +38,55 @@
                  <button class="button">Sign Up</button> 
         <button class="button2">Sign Up</button> 
 </nav>
+
   <style type="text/css">
 
 </style>   
     
-       <h1> Eateries </h1> 
+       <h1 class="main"> Eateries </h1> 
 
-    <div class="push"><%= link_to "New", new_eatery_path %></div>
+
+    <div class="push"></div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Website</th>
+      <th>Rating</th>
+      <th>Drive Thru</th>
+      <th>Lobby Hours</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th colspan="9"></th>   
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eateries.each do |eatery| %>
+      <tr>
+        <td><%= eatery.name %></td>
+        <td><%= eatery.address %></td>
+        <td><%= eatery.lat %></td>
+        <td><%= eatery.long %></td>
+        <td><%= eatery.phone_num %></td>
+        <td><%= eatery.website %></td>
+        <td><%= eatery.rating %></td>
+        <td><%= eatery.drive_thru %></td>
+        <td><%= eatery.lobby_hours %></td>
+        <%= link_to "Eatery Profile", eatery %>
+        <%= link_to "Edit", edit_eatery_path(eatery) %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+    <%= link_to "New", new_eatery_path %>
 <html>
+
+
+
+
+

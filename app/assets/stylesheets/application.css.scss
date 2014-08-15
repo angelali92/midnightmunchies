@@ -16,6 +16,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+
+
 * {
 	margin: 0;
 }
@@ -44,7 +47,7 @@ html, body {
 .site-footer {
 	background: gray;
 	height: 100px;
-	width: 1905px;
+	width: 1956px;
     margin-left: -50px;
 }
 .settings{
@@ -56,4 +59,9 @@ html, body {
 }
 .bar{
 	text-align: center;
+}
+
+
+.main {
+  	font-family: 'Bangers', cursive;
 }
