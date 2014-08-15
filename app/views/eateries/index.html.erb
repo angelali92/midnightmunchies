@@ -1,27 +1,66 @@
+<html>
+  <table>
+    
+    
+  
 
-<h1> Eateries </h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Lat Long</th>
-      <th>Phone Number</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
+    <thead>
+      <title>Midnight Munchies</title>
+      
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-  <tbody>
-    <% @eateries.each do |eatery| %>
-      <tr>
-        <td><%= eatery.name %></td>
-        <td><%= eatery.address %></td>
-        <td><%= eatery.lat_long %></td>
-        <td><%= eatery.phone_num %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-<%= link_to 'Create New Eatery', eateries_new_path %>
+        <!-- Latest compiled and minified JavaScript -->
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+       
+       <div class="search"> 
+            <form class="navbar-form navbar-left" role="Enter Location">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Enter Location">
+            </div>
+          </form>
+       </div> 
+                        <nav class="box">
+
+                              <div class="email"> 
+                                        <form class="navbar-form navbar-left" role="Enter Location">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Enter Location">
+                                        </div>
+                                      </form>
+                                   </div> 
+                        </nav>
+
+  <style type="text/css">
+  body{
+    background-color: #474747
+  }
+  
+</style>       
+        </thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Lat Long</th>
+          <th>Phone Number</th>
+          <th colspan="4"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @eateries.each do |eatery| %>
+          <tr>
+            <td><%= eatery.name %></td>
+            <td><%= eatery.address %></td>
+            <td><%= eatery.lat_long %></td>
+            <td><%= eatery.phone_num %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <%= link_to 'Create New Eatery', eateries_new_path %>
+<html>
