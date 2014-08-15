@@ -1,6 +1,6 @@
 class CreateEateries < ActiveRecord::Migration
   def change
-    create_table :eateries do |t|
+    create_table :CreateEateries do |t|
       t.string :name
       t.string :address
       t.string :lat_long
@@ -20,4 +20,4 @@ class CreateEateries < ActiveRecord::Migration
       t.timestamps
     end
   end
-end
+end           

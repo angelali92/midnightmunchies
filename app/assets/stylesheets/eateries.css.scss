@@ -1,3 +1,37 @@
 // Place all the styles related to the Eateries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+
+ body {
+        background-color: #474747;
+      }
+
+      .search{
+        margin-left: 29%;
+        width: 800px;
+        padding-bottom: 150px;  
+        }
+
+      .navbar{
+        background-color: #f88c43;
+        height: 100px;
+        width: 100%;
+      }
+      .box{
+        background-color: #77787e;
+        height: 400px;
+        width: 400px;
+        border-radius: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .email{
+        margin-left: 29%;
+        width: 800px;
+        padding-bottom: 150px;  
+      }

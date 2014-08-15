@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'eateries#index'
   # You can have the root of your site routed with "root"
+
       resources :eateries
       resources :users
 
