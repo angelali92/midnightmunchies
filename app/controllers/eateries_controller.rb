@@ -1,6 +1,8 @@
 class EateriesController < ApplicationController
+	helper_method :sort_column, :sort_direction
+  
 	def index
-		@eateries = Eatery.all
+	  @eateries = Eatery.order(sort_column + " " + sort_direction)
 	end
 
 	def show	
@@ -45,5 +47,14 @@ class EateriesController < ApplicationController
 	private
 		def eatery_params
 			params.require(:eatery).permit(:name, :address, :lat, :long, :phone_num, :hours, :image_url, :website, :rating, :drive_thru)
-end
+		end
+
+		def sort_column
+		    Eatery.column_names.include?(params[:sort]) ? params[:sort] : "name"
+		end
+		  
+		def sort_direction
+		    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+		end
+		
 end

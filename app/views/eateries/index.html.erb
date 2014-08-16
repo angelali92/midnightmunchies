@@ -3,7 +3,7 @@
     
     
    
-
+ 
 
     <thead>
       <title class="main">Midnight Munchies</title>
@@ -50,16 +50,16 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Picture</th>
-      <th>Address</th>
-      <th>Phone Number</th>
-      <th>Website</th>
-      <th>Rating</th>
-      <th>Drive Thru</th>
-      <th>Lobby Hours</th>
-      <th>Lat</th>
-      <th>Long</th>
+      <th><%= sortable "name" %></th>
+      <th> Picture </th>
+      <th><%= sortable "address" %></th>
+      <th><%= sortable "phone_num" %></th>
+      <th><%= sortable "website" %></th>
+      <th><%= sortable "rating" %></th>
+      <th><%= sortable "drive_thru" %></th>
+      <th><%= sortable "lobby_hours" %></th>
+      <th><%= sortable "lat" %></th>
+      <th><%= sortable "long" %></th>
       <th colspan="9"></th>   
     </tr>
   </thead>
@@ -68,7 +68,6 @@
     <% @eateries.each do |eatery| %>
       <tr>
         <td><%= eatery.name %></td>
-
         <td><%= eatery.address %></td>
         <td><img src=<%= eatery.image_url %>></td> 
         <td><%= eatery.lat %></td>

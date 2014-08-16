@@ -28,6 +28,14 @@ html, body {
 	height: 100%;
 }
 
+.navbar{  
+	background-color: #f88c43;
+	height: 125px;
+	width: 100%;
+	font-family: Gloria Hallelujah;
+	font-size: 45px;
+}
+
 .page-wrap {
 	margin: 50px;
 	min-height: 100%;
@@ -48,13 +56,15 @@ html, body {
 .site-footer {
 	background: gray;
 	height: 100px;
-	width: 1956px;
-    margin-left: -50px;
+	width: 100%;
+/*    margin-left: -50px;*/
 }
 .settings{
 	margin-top: 2px;
-	margin-left: 1800px;
+/*	margin-left: 1800px;*/
+	float: right;
 }
+
 .logo{
 	margin-left: 100px;
 }
@@ -62,6 +72,19 @@ html, body {
 	text-align: center;
 }
 
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+.pretty th .desc {
+  background-image: url(/images/down_arrow.gif);
+}
 
 
 
