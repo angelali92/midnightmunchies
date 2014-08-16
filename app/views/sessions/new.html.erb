@@ -1,16 +1,29 @@
 <div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: signin_path) do |f| %>
+  <!-- <div class="span6 offset3"> -->
+  
+  <div class="search"> 
+      <form role="Enter Location">
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Enter Location">
+          </div>
+      </form>
+  </div> 
 
-      <%= f.label :email %>
-      <%= f.text_field :email %><br/>
+  <div class="box">
+  <%= form_for(:session, url: signin_path) do |f| %>
+      <br>
+      <div class="form-group">
+        <%= f.text_field :email, :placeholder => "Enter Email", style: "width:100%;" %><br/>
+      </div> 
 
-      <%= f.label :password %>
-      <%= f.text_field :password %><br/>
+
+      <div class="form-group">
+        <%= f.text_field :password, :placeholder => "Enter Password", style: "width:100%;" %><br/>
+      </div>
 
       <%= f.submit "Sign In", class: "btn btn-large btn-primary" %>
-    <% end %>
+  <% end %>
+  <p style="clear:both;"><%= link_to "New user?", signup_path %></p> 
+  </div> 
 
-    <p><%= link_to "New user?", signup_path %></p>
-  </div>
 </div>

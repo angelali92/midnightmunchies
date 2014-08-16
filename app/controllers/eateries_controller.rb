@@ -1,6 +1,8 @@
 class EateriesController < ApplicationController
+	helper_method :sort_column, :sort_direction
+
 	def index
-		@eateries = Eatery.all
+		@eateries = Eatery.order(sort_column + " " + sort_direction)
 	end
 
 	def show	
@@ -24,26 +26,36 @@ class EateriesController < ApplicationController
 	end
 
 	def edit
-  	@eatery = Eatery.find(params[:id])
-  	end
+		@eatery = Eatery.find(params[:id])
+	end
 
-  	def update
-	  	@eatery = Eatery.find(params[:id])
-	  	if @eatery.update_attributes(eatery_params)
-	  			redirect_to @eatery
+	def update
+		@eatery = Eatery.find(params[:id])
+		if @eatery.update_attributes(eatery_params)
+			redirect_to @eatery
 		else
 			render "edit"
 		end
-  end
+	end
 
-  def destroy
-  	@eatery = Eatery.find(params[:id])
-  	@eatery.destroy
-  	redirect_to eateries_path
-   end
+	def destroy
+		@eatery = Eatery.find(params[:id])
+		@eatery.favorites.each {|f| f.destroy }
+		@eatery.destroy
+		redirect_to eateries_path
+	end
 
 	private
 		def eatery_params
 			params.require(:eatery).permit(:name, :address, :lat, :long, :phone_num, :hours, :image_url, :website, :rating, :drive_thru)
-end
+		end
+
+		def sort_column
+			Eatery.column_names.include?(params[:sort]) ? params[:sort] : "name"
+		end
+
+		def sort_direction
+			%w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+		end
+
 end

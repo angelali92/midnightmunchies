@@ -1,36 +1,21 @@
-<html>
-  <table>
-    
-    
-   
 
 
-    <thead>
-      <title class="main">Midnight Munchies</title>
-     
-<div class="row">
-  <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
-  <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
-</div>    
-       <h1 class="main"> Eateries </h1> 
+<h1 class="main"> Eateries </h1> 
 
+<table class="table col-md-9 table-hover">
 
-
-
-    <div class="push"></div>
-<table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Picture</th>
-      <th>Address</th>
-      <th>Phone Number</th>
-      <th>Website</th>
-      <th>Rating</th>
-      <th>Drive Thru</th>
-      <th>Lobby Hours</th>
-      <th>Lat</th>
-      <th>Long</th>
+      <th><%= sortable "name" %></th>
+      <th> Picture </th>
+      <th><%= sortable "address" %></th>
+      <th><%= sortable "phone_num" %></th>
+      <th><%= sortable "website" %></th>
+      <th><%= sortable "rating" %></th>
+      <th><%= sortable "drive_thru" %></th>
+      <th><%= sortable "lobby_hours" %></th>
+      <th><%= sortable "lat" %></th>
+      <th><%= sortable "long" %></th>
       <th colspan="9"></th>   
     </tr>
   </thead>
@@ -39,7 +24,6 @@
     <% @eateries.each do |eatery| %>
       <tr>
         <td><%= eatery.name %></td>
-
         <td><%= eatery.address %></td>
         <td><img src=<%= eatery.image_url %>></td> 
         <td><%= eatery.lat %></td>
@@ -51,18 +35,18 @@
         <td><%= eatery.lobby_hours %></td>
         <td><%= link_to "Show", eatery %></td>
         <td><%= link_to "Edit", edit_eatery_path(eatery) %></td>
+        <td><%= link_to "Favorite", new_favorite_path(eatery) %></td>
       </tr>
     <% end %>
   </tbody>
+
 </table>
 
 
-    <%= link_to "New", new_eatery_path %>
+<p><%= link_to "New", new_eatery_path, class: "" %></p>
+<p><%= link_to "My Account", signin_path %></p>
+<p><%= link_to "Sign Out", signout_path , method: "delete" %><p> 
 
-    <%= link_to "Sign In", signin_path %>
-
-<html>
- 
 
 
 
