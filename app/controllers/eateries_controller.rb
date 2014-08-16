@@ -40,6 +40,7 @@ class EateriesController < ApplicationController
 
 	def destroy
 		@eatery = Eatery.find(params[:id])
+		@eatery.favorites.each {|f| f.destroy }
 		@eatery.destroy
 		redirect_to eateries_path
 	end

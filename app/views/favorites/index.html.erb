@@ -15,7 +15,8 @@
                 <td><%= fav.name %></td>
                 <td><%= fav.description %></td>
                 <td><%= Eatery.find(fav.eatery_id).name %></td>
-                <td><%= link_to "Show", fav %></td>
+                <td><%= link_to "Show", Eatery.find(fav.eatery_id) %></td>
+                <td><%= link_to "Remove From Favorites", fav, method: "delete" %></td>
             </tr>
         <% end %>
     </tbody>

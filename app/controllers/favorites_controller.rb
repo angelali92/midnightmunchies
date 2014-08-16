@@ -20,7 +20,7 @@ class FavoritesController < ApplicationController
 			@favorites = Favorite.all
 			redirect_to @favorite
 		else
-			redirect_to "new"
+			render 'new'
 		end
 	end
 
@@ -30,7 +30,7 @@ class FavoritesController < ApplicationController
 
 	# Delete a favorite eatery.
 	def destroy
-		@favorite = Eatery.find(params[:id])
+		@favorite = Favorite.find(params[:id])
   		@favorite.destroy
   		redirect_to favorites_path
 	end

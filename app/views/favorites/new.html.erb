@@ -25,8 +25,7 @@
 
       <%= f.submit "Add To Favorites", class: "btn btn-large btn-primary" %>
     <% end %>
-
-    Eatery ID = <%=@eatery_id%>
-    User ID = <%=current_user.id%>
+    
+    <p><%= link_to "Cancel", favorites_path %></p>
   </div>
 </div>
