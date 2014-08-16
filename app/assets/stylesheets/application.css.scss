@@ -41,6 +41,14 @@ html, body {
 	text-align: center;
 }
 
+.navbar{  
+	background-color: #f88c43;
+	height: 125px;
+	width: 100%;
+	font-family: Gloria Hallelujah;
+	font-size: 45px;
+}
+
 .page-wrap {
 	margin: 50px;
 	min-height: 100%;
@@ -62,6 +70,7 @@ html, body {
 	background: gray;
 	height: 100px;
 	width: 100%;
+
 }
 .settings{
 	width: 90px;
@@ -70,10 +79,28 @@ html, body {
 	padding-left: 10px;
 	float:right;
 }
+
+
 .logo{
 	/*margin-left: 100px;*/
 }
 
+
+
+/*arrows for the column filter*/
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+.pretty th .desc {
+  background-image: url(/images/down_arrow.gif);
+}
 
 
 
