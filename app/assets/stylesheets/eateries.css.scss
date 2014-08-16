@@ -4,3 +4,51 @@
 .main {
 	color: #D1D1D1;
 }
+
+.navbar2{  
+  background-color: #D1D1D1;
+  height: 125px;
+  width: 100%;
+  font-family: 'Gloria Hallelujah';
+  display: inline-block;
+  position: relative;
+  font-size: 35px;
+}
+.navbar3{  
+  background-color: #f0f0f0;
+  height: 142px;
+  width: 100%;
+  font-family: 'Gloria Hallelujah';
+  display: inline-block;
+  position: relative;
+  font-size: 35px;
+}
+.hours{
+  margin: 2%;
+  float: left;
+  width: 300px;
+}
+.btn{
+  height: 100%;
+  float: left;
+  width: 10%;
+}
+.back{
+font-size: 70px;
+color: #000;
+text-decoration: none;
+}
+.back a:link{
+text-decoration: none;
+}
+.back a:hover{
+color: #474747;
+}
+.name{
+  font-size: 60px;
+}
+.map{
+  margin-left: 29%;
+  margin-right: auto;
+  position: relative;
+}

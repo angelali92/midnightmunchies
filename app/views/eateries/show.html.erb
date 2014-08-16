@@ -1,17 +1,43 @@
-<h1>SHOW BABY</h1>
+<nav class="navbar3"><button class="btn">
+	<div class="back"><%= link_to "", eateries_path,class: "back glyphicon glyphicon-chevron-left" %></div>
+</button>
+	<div class="hours name">
+	    <strong><%= @eatery.name %></strong> 
+	    <br>
+  	</div>
+  	<div class="hours">
+	    <img src=<%= @eatery.image_url %>>
+	    <br>
+  	</div>
+  	<div class="hours">
+	    <strong>Website:</strong>
+	     <%= @eatery.website %> 
+	    <br>
+  	</div>
+  	 </nav>
+	<nav class="navbar2"> 
+
+		<div class="hours">
+			<strong>Lobby Hours:</strong>
+			<p> <%= @eatery.lobby_hours %> </p>
+		    <br>
+	   </div>
+	 	<div class="hours">
+		   <strong>Rating:</strong>
+		    <%= @eatery.rating %> 
+		   <br>
+	  	</div>
+		<div class="hours">
+		    <strong>Drive Thru:</strong>
+		     <%= @eatery.drive_thru %> 
+		    <br>
+	  	</div>
+	</nav>
 
 	
-	<p>
-	    <strong>Picture:</strong>
-	    <p> <img src=<%= @eatery.image_url %>> </p>
-	    <br>
+	
   	<p>
-	<p>
-	    <strong>Name:</strong>
-	    <p> <%= @eatery.name %> </p>
-	    <br>
-  	<p>
-  	<p>
+	    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3314.8831545684716!2d-117.80150350000001!3d33.8153283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd09a2959d831%3A0x7e1cb7ce589b6ee9!2sOld+Ranch+Cir%2C+Villa+Park%2C+CA+92861!5e0!3m2!1sen!2sus!4v1408228507159" width="600" height="450" frameborder="0" style="border:0"></iframe>
 	    <strong>Address:</strong>
 	    <p> <%= @eatery.address %> </p>
 	    <br>
@@ -21,26 +47,10 @@
 	    <p> <%= @eatery.phone_num %> </p>
 	    <br>
   	<p>
-  	<p>
-	    <strong>Website:</strong>
-	    <p> <%= @eatery.website %> </p>
-	    <br>
-  	<p>
-  	<p>
-	    <strong>Rating:</strong>
-	    <p> <%= @eatery.rating %> </p>
-	    <br>
-  	<p>
-  	<p>
-	    <strong>Drive Thru:</strong>
-	    <p> <%= @eatery.drive_thru %> </p>
-	    <br>
-  	<p>
-  	<p>
-	    <strong>Lobby Hours:</strong>
-	    <p> <%= @eatery.lobby_hours %> </p>
-	    <br>
-  	<p>
+  	
+  
+  	
+  	
   	<p>
 	    <strong>Lat:</strong>
 	    <p> <%= @eatery.lat %> </p>
