@@ -17,7 +17,7 @@
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 @import url(http://fonts.googleapis.com/css?family=Bangers);
-
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
 
 
 * {
@@ -27,6 +27,8 @@
 html, body {
 	height: 100%;
 	background-color: #474747;
+	font-family: 'Alegreya Sans SC';
+	font-size: 1.1em;
 }
 
 .navbar{  
@@ -45,7 +47,7 @@ html, body {
 	background-color: #f88c43;
 	height: 125px;
 	width: 100%;
-	font-family: Gloria Hallelujah;
+	font-family: 'Gloria Hallelujah';
 	font-size: 45px;
 }
 

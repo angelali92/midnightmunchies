@@ -2,7 +2,7 @@
 
 <h1 class="main"> Eateries </h1> 
 
-<table>
+<table class="table col-md-9 table-hover">
   <thead>
     <tr>
       <th><%= sortable "name" %></th>
@@ -42,7 +42,7 @@
 </table>
 
 
-<p><%= link_to "New", new_eatery_path %></p>
+<p><%= link_to "New", new_eatery_path, class: "" %></p>
 <p><%= link_to "My Account", signin_path %></p>
 <p><%= link_to "Sign Out", signout_path , method: "delete" %><p> 
 
