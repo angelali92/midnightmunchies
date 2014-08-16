@@ -21,17 +21,22 @@
   font-family: 'Gloria Hallelujah';
   display: inline-block;
   position: relative;
-  font-size: 35px;
+  font-size: 20px;
 }
 .hours{
   margin: 2%;
   float: left;
   width: 300px;
 }
+.hours{
+  margin: 2%;
+  float: left;
+  width: 10%;
+}
 .btn{
   height: 100%;
   float: left;
-  width: 10%;
+  width: 20%;
 }
 .back{
 font-size: 70px;
@@ -47,8 +52,6 @@ color: #474747;
 .name{
   font-size: 60px;
 }
-.map{
-  margin-left: 29%;
-  margin-right: auto;
-  position: relative;
+.map {
+  text-align: center;
 }

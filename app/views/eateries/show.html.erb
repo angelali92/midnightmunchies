@@ -1,6 +1,7 @@
-<nav class="navbar3"><button class="btn">
+<nav class="navbar3">
+	<button class="btn">
 	<div class="back"><%= link_to "", eateries_path,class: "back glyphicon glyphicon-chevron-left" %></div>
-</button>
+	</button>
 	<div class="hours name">
 	    <strong><%= @eatery.name %></strong> 
 	    <br>
@@ -14,7 +15,12 @@
 	     <%= @eatery.website %> 
 	    <br>
   	</div>
-  	 </nav>
+  	<div class="hours">
+	    <strong>Phone Number:</strong>
+	    <%= @eatery.phone_num %>
+	    <br>
+  	</div>
+ </nav>
 	<nav class="navbar2"> 
 
 		<div class="hours">
@@ -36,36 +42,16 @@
 
 	
 	
-  	<p>
-	    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3314.8831545684716!2d-117.80150350000001!3d33.8153283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd09a2959d831%3A0x7e1cb7ce589b6ee9!2sOld+Ranch+Cir%2C+Villa+Park%2C+CA+92861!5e0!3m2!1sen!2sus!4v1408228507159" width="600" height="450" frameborder="0" style="border:0"></iframe>
+  	<div class="map">
+		<button class="google" onclick="maps(this, 'green')">Hi</button>
+	    <br/>
+	    <div style="clear:both; text-align:center;">
 	    <strong>Address:</strong>
 	    <p> <%= @eatery.address %> </p>
 	    <br>
-  	<p>
-  	<p>
-	    <strong>Phone Number:</strong>
-	    <p> <%= @eatery.phone_num %> </p>
-	    <br>
-  	<p>
-  	
-  
-  	
-  	
-  	<p>
-	    <strong>Lat:</strong>
-	    <p> <%= @eatery.lat %> </p>
-	    <br>
-  	<p>
-  	<p>
-	    <strong>Long:</strong>
-	    <p> <%= @eatery.long %> </p>
-	    <br>
-  	<p>
+	    </div>
+  	</div>>
 
-
-
-
-	
 
 
 <p><%= link_to "Edit", edit_eatery_path %></p>
