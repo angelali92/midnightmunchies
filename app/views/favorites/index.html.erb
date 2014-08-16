@@ -1,0 +1,22 @@
+<h1 class="main"> Favorites </h1> 
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @favorites.each do |fav| %>
+            <tr>
+                <td><%= Eatery.find(fav.eatery_id).name %></td>
+                <td><%= link_to "Show", fav %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+
+<p><%= link_to "My Account", signin_path %></p>
+<p><%= link_to "Sign Out", signout_path , method: "delete" %><p> 

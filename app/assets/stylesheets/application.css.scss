@@ -13,9 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
-
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 
 
@@ -26,6 +26,19 @@
 
 html, body {
 	height: 100%;
+	background-color: #474747;
+}
+
+.navbar{  
+  background-color: #f88c43;
+  /*height: 125px;*/
+  width: 100%;
+  font-family: 'Gloria Hallelujah';
+  font-size: 45px;
+}
+
+.bar{
+	text-align: center;
 }
 
 .page-wrap {
@@ -48,19 +61,20 @@ html, body {
 .site-footer {
 	background: gray;
 	height: 100px;
-	width: 1956px;
-    margin-left: -50px;
+	width: 100%;
 }
 .settings{
-	margin-top: 2px;
-	margin-left: 1800px;
+	width: 90px;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-left: 10px;
+	float:right;
 }
 .logo{
-	margin-left: 100px;
+	/*margin-left: 100px;*/
 }
-.bar{
-	text-align: center;
-}
+
+
 
 
 
