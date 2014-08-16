@@ -3,6 +3,7 @@
 <h1 class="main"> Eateries </h1> 
 
 <table class="table col-md-9 table-hover">
+
   <thead>
     <tr>
       <th><%= sortable "name" %></th>
@@ -32,7 +33,7 @@
         <td><%= eatery.rating %></td>
         <td><%= eatery.drive_thru %></td>
         <td><%= eatery.lobby_hours %></td>
-        <td><%= link_to "Show", eatery %></td>
+        <td><%= link_to "View", eatery %></td>
         <td><%= link_to "Edit", edit_eatery_path(eatery) %></td>
         <td><%= link_to "Favorite", new_favorite_path(eatery) %></td>
       </tr>
