@@ -8,6 +8,8 @@ class FavoritesController < ApplicationController
 	# Create a new favorite
 	def new
 		@favorite = Favorite.new
+		@eatery_id = params[:format]
+		@user_id = current_user.id
 	end
 
 	# Create the favorite
@@ -22,6 +24,10 @@ class FavoritesController < ApplicationController
 		end
 	end
 
+	def show
+		@favorite = Favorite.find(params[:id])
+	end
+
 	# Delete a favorite eatery.
 	def destroy
 		@favorite = Eatery.find(params[:id])
@@ -31,6 +37,6 @@ class FavoritesController < ApplicationController
 	
 	private
 		def favorite_params
-			params.require(:favorite).permit(:user_id, :eatery_id)
+			params.require(:favorite).permit(:name, :description, :user_id, :eatery_id)
 		end
 end

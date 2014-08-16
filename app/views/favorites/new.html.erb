@@ -1,1 +1,32 @@
-new.html.erb
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @favorite do |f| %>
+      <% if @favorite.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@favorite.errors.count, "error") %> prohibited this eatery from being favorited:</h2>
+
+          <ul>
+          <% @favorite.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+      <%= f.label :name %>
+      <%= f.text_field :name %><br/>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %><br/>
+
+      <%= f.hidden_field :user_id, :value => @user_id%>
+      <%= f.hidden_field :eatery_id, :value => @eatery_id %>
+
+      <%= f.submit "Add To Favorites", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    Eatery ID = <%=@eatery_id%>
+    User ID = <%=current_user.id%>
+  </div>
+</div>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   
   resources :users, only: [:show, :edit, :update, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :favorites, only: [:index, :new, :create, :destroy]
+  resources :favorites, only: [:index, :new, :show, :create, :destroy]
 
   get 'signin' => 'sessions#new', as: :signin
   post 'signin' => 'sessions#create'

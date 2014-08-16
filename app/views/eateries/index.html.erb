@@ -34,6 +34,7 @@
         <td><%= eatery.lobby_hours %></td>
         <td><%= link_to "Show", eatery %></td>
         <td><%= link_to "Edit", edit_eatery_path(eatery) %></td>
+        <td><%= link_to "Favorite", new_favorite_path(eatery) %></td>
       </tr>
     <% end %>
   </tbody>
