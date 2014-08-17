@@ -19,7 +19,11 @@
 
 @import url(http://fonts.googleapis.com/css?family=Righteous);
 
-
+/* Tables for Firefox */
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+/* End Tables for Firefox */
 
 * {
 	margin: 0;
@@ -44,12 +48,13 @@ NAVBAR
 .navbar{  
 	background-color: #f88c43;
 	margin-top: -3%;
-	font-family: 'Gloria Hallelujah';
+	font-family: 'Righteous';
 	font-size: 12px;
 }
 
 .navbar a {  
-	color: #474747;
+	color: black;
+	margin-left: -9px;
 }
 
 .navbar a:hover {  
@@ -96,13 +101,14 @@ NAVBAR
 }
 
 .logos {
-	width:300px;
+	width:400px;
 	margin-top: 5%;
 	padding-bottom: 1%;
 	height:100px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	font-size:30px;
 }
 
 .new_field {

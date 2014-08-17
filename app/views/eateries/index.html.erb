@@ -2,45 +2,57 @@
 
 <h1 class="main"> Eateries </h1> 
 
-<table class="table col-md-9 table-hover">
+<div class="table-responsive">
+  <table class="table table-hover" width="100%">
 
-  <thead>
-    <tr>
-      <th><%= sortable "name" %><span class="caret"></span></th>
-      <th class="pic_text"> Picture </th>
-      <th><%= sortable "address" %><span class="caret"></span></th>
-      <th><%= sortable "phone_num" %><span class="caret"></span></th>
-      <th><%= sortable "website" %><span class="caret"></span></th>
-      <th><%= sortable "rating" %><span class="caret"></span></th>
-      <th><%= sortable "drive_thru" %><span class="caret"></span></th>
-      <th><%= sortable "lobby_hours" %><span class="caret"></span></th>
-      <th><%= sortable "lat" %><span class="caret"></span></th>
-      <th><%= sortable "long" %><span class="caret"></span></th>
-      <th colspan="9"></th>   
-    </tr>
-  </thead>
+    <thead>
+      <tr>
+        <th><%= sortable "name" %><span class="caret"></span></th>
+        <th><%= sortable "address" %><span class="caret"></span></th>
+        <th><%= sortable "phone_num" %><span class="caret"></span></th>
+        <th><%= sortable "rating" %><span class="caret"></span></th>
+        <th><%= sortable "drive_thru" %><span class="caret"></span></th>
 
-  <tbody>
-    <% @eateries.each do |eatery| %>
-      <tr class= "tBody">
-        <td><%= eatery.name %></td>
-        <td><img src=<%= eatery.image_url %>></td> 
-        <td><%= eatery.address %></td>
-        <td><%= eatery.phone_num %></td>
-        <td><%= eatery.website %></td>
-        <td><%= eatery.rating %></td>
-        <td><%= eatery.drive_thru %></td>
-        <td><%= eatery.lobby_hours %></td>
-        <td><%= eatery.lat %></td>
-        <td><%= eatery.long %></td>
-        <td><%= link_to "View", eatery %></td>
-        <td><%= link_to "Edit", edit_eatery_path(eatery) %></td>
-        <td><%= link_to "Favorite", new_favorite_path(eatery) %></td>
+        <th colspan="9"></th>   
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
 
-</table>
+    <tbody>
+      <% @eateries.each do |eatery| %>
+        <tr class= "tBody">
+          <td>
+            <%= link_to(eatery) do %>
+              <%= eatery.name %>
+              <p><img class="eatery-logo" src=<%= eatery.image_url %>></p>
+            <% end %>
+          </td> 
+          <td><%= eatery.address %></td>
+          <td><%= eatery.phone_num %></td>
+          <td>
+              <% if eatery.rating.to_i > 0 %> 
+                <% eatery.rating.to_i.times do |i| %>
+                  s
+                <% end %> 
+              <% else %>
+                No Rating
+              <% end %>
+          </td>
+          <td>
+             <% if eatery.drive_thru %> 
+              Yes
+             <% else %>
+              No
+             <% end %>
+          </td>
+          <td><%= link_to "View", eatery %></td>
+          <td><%= link_to "Edit", edit_eatery_path(eatery) %></td>
+          <td><%= link_to "Favorite", new_favorite_path(eatery) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+
+  </table>
+</div>
 
 
 <p><%= link_to "New", new_eatery_path, class: "" %></p>

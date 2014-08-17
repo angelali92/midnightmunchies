@@ -4,3 +4,33 @@
 .main {
 	color: #D1D1D1;
 }
+
+@media screen and (min-width: 200px) {
+	.eatery-logo {
+		width: 40px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.eatery-logo {
+		width: 96px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.eatery-logo {
+		width: 128px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.eatery-logo {
+		width: 160px;
+	}
+}
+
+@media screen and (min-width: 1680px) {
+	.eatery-logo {
+		width: 240px;
+	}
+}
