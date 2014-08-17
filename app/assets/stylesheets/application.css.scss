@@ -16,8 +16,8 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
-@import url(http://fonts.googleapis.com/css?family=Bangers);
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
+
+@import url(http://fonts.googleapis.com/css?family=Righteous);
 
 
 
@@ -28,7 +28,8 @@
 html, body {
 	height: 100%;
 	background-color: #474747;
-	font-family: 'Alegreya Sans SC';
+	font-family: 'Righteous';
+	color: #d1d1d1;
 	font-size: 1.1em;
 }
 /*************************************
@@ -78,19 +79,32 @@ NAVBAR
 	float:right;
 }
 
+.tBody:hover {
+	color: black;
+}
 
 .logo{
 	margin-left: auto;
-}
-
-.pic_text {
-	color: #D1D1D1;
 }
 
 .logos {
 	width:200px;
 	height:90px;
 	display: inline-block;
+}
+
+.new_field {
+	text-align: center;
+	clear: both;
+}
+
+.new_input {
+	text-align: center;
+}
+
+#sub_input {
+	text-align: center;
+	clear: both;
 }
 
 
