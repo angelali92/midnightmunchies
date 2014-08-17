@@ -31,9 +31,9 @@
 				    <% @eatery.rating.to_i.times do |i| %>
 				    	s
 				    <% end %> 
-			     <% else %>
-			     	No
-			     <% end %>
+			    <% else %>
+			     	No Rating
+			    <% end %>
 		  	</div>
 			</div>
 		<div class="col-xs-6 col-sm-3 col-md-2">
@@ -42,7 +42,7 @@
 			     <% if @eatery.drive_thru %> 
 			     	Yes
 			     <% else %>
-			     	None
+			     	No
 			     <% end %>
 		  	</div>
 		</div>
