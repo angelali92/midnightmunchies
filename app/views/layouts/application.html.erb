@@ -4,7 +4,8 @@
 <head>
   <title>Midnight Munchies</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'data-turbolinks-track' => true %>
+<%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -15,44 +16,15 @@
 	<div id="nav">
 		<nav class="navbar navbar-default" role="navigation">
 		  	<div class="container-fluid">
-		    	<!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
 
-				
+		  		<div class="navbar logos" style="font-size:20px;"> 
+		  			<%= link_to(eateries_path) do %>
+  						<%= image_tag("https://s3.amazonaws.com/uploads.hipchat.com/140618/1019233/tqhnDjPhsOFYT8G/Logo_Big.png", height: '100%') %>
+					<% end %>	
+					<%= link_to "idnight Munchies", eateries_path %>
+				</div>
 
-					<div class="logos"> <%= link_to(eateries_path) do %>
-  							<%= image_tag("https://s3.amazonaws.com/uploads.hipchat.com/140618/1019233/tqhnDjPhsOFYT8G/Logo_Big.png", height: '100%') %>
-							<% end %>
 					
-		
-						<%= link_to "idnight Munchies", eateries_path %>
-					</div>
-			    
-
-
-
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-
-
-					<ul class="nav navbar-nav navbar-right">
-						<!--Account Dropdown-->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Angela Li	
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu" role="menu">
-								<li ><a href='#'>My Pinned Pins</a></li>
-								<li ><a href='#'>My Pinned Pins</a></li>
-							</ul>
-						</li>
-						<!--End Account Dropdown-->
-					</ul>
 
 			</div><!-- end div.container-fluid -->
 		</nav>

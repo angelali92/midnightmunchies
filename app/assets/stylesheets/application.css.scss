@@ -42,9 +42,17 @@ NAVBAR
 
 .navbar{  
 	background-color: #f88c43;
-	height: 100px;
+	margin-top: -3%;
 	font-family: 'Gloria Hallelujah';
 	font-size: 12px;
+}
+
+.navbar a {  
+	color: #474747;
+}
+
+.navbar a:hover {  
+	text-decoration: none;
 }
 
 .page-wrap {
@@ -78,19 +86,18 @@ NAVBAR
 	float:right;
 }
 
-
-.logo{
-	margin-left: auto;
-}
-
 .pic_text {
 	color: #D1D1D1;
 }
 
 .logos {
-	width:200px;
-	height:90px;
-	display: inline-block;
+	width:300px;
+	margin-top: 5%;
+	padding-bottom: 1%;
+	height:100px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 

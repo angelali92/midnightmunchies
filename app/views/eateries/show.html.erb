@@ -5,7 +5,7 @@
 	    		<%= @eatery.name %> 
 	   			<br>
 	    		<%= link_to(@eatery.website, target: '_blank') do %>
-  					<%= image_tag(@eatery.image_url, width: '100%', alt: @eatery.name) %>
+  					<%= image_tag(@eatery.image_url, width: '100%', alt: 'Image Url') %>
 				<% end %>
   			</div>
 		</div>
@@ -52,9 +52,7 @@
 		  	</div>
 		</div>
 	</div>
-</div>
 
-	
 <!-- <div class="map">
 	<br/>
 	<div style="clear:both; text-align:center;">
@@ -68,3 +66,8 @@
 <p><%= link_to "Edit Eatery", edit_eatery_path %></p>
 <p><%= link_to "Index", eateries_path %></p>
 <p><%= link_to "Delete", @eatery, method: "delete" %></p>
+
+</div>
+
+	
+

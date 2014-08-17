@@ -3,6 +3,8 @@ class EateriesController < ApplicationController
 
 	def index
 		@eateries = Eatery.order(sort_column + " " + sort_direction)
+		@asc = "http://www.clipartbest.com/cliparts/nTX/EGB/nTXEGBLTB.png"
+		@desc = "http://upload.wikimedia.org/wikipedia/en/e/e0/Black_Down_Arrow.png"
 	end
 
 	def show	
