@@ -49,7 +49,7 @@ class EateriesController < ApplicationController
 
 	private
 		def eatery_params
-			params.require(:eatery).permit(:name, :address, :lat, :long, :phone_num, :hours, :image_url, :website, :rating, :drive_thru)
+			params.require(:eatery).permit(:name, :address, :phone_num, :image_url, :website, :rating, :drive_thru)
 		end
 
 		def sort_column
