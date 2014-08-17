@@ -24,15 +24,15 @@
     <% @eateries.each do |eatery| %>
       <tr>
         <td><%= eatery.name %></td>
-        <td><%= eatery.address %></td>
         <td><img src=<%= eatery.image_url %>></td> 
-        <td><%= eatery.lat %></td>
-        <td><%= eatery.long %></td>
+        <td><%= eatery.address %></td>
         <td><%= eatery.phone_num %></td>
         <td><%= eatery.website %></td>
         <td><%= eatery.rating %></td>
         <td><%= eatery.drive_thru %></td>
         <td><%= eatery.lobby_hours %></td>
+        <td><%= eatery.lat %></td>
+        <td><%= eatery.long %></td>
         <td><%= link_to "View", eatery %></td>
         <td><%= link_to "Edit", edit_eatery_path(eatery) %></td>
         <td><%= link_to "Favorite", new_favorite_path(eatery) %></td>
