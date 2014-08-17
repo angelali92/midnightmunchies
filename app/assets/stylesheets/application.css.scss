@@ -31,6 +31,10 @@ html, body {
 	font-family: 'Alegreya Sans SC';
 	font-size: 1.1em;
 }
+/*************************************
+NAVBAR
+************************************/
+
 
 .bar{
 	text-align: center;
@@ -42,7 +46,6 @@ html, body {
 	font-family: 'Gloria Hallelujah';
 	font-size: 12px;
 }
-
 
 .page-wrap {
 	/*margin: 50px;*/
@@ -80,6 +83,16 @@ html, body {
 	margin-left: auto;
 }
 
+.pic_text {
+	color: #D1D1D1;
+}
+
+.logos {
+	width:200px;
+	height:90px;
+	display: inline-block;
+}
+
 
 
 /*arrows for the column filter*/
@@ -90,11 +103,11 @@ html, body {
 }
 
 .pretty th .asc {
-  background-image: url(/images/up_arrow.gif);
+  background-image: url(http://www.clipartbest.com/cliparts/nTX/EGB/nTXEGBLTB.png);
 }
 
 .pretty th .desc {
-  background-image: url(/images/down_arrow.gif);
+  background-image: url(http://upload.wikimedia.org/wikipedia/en/e/e0/Black_Down_Arrow.png);
 }
 
 
