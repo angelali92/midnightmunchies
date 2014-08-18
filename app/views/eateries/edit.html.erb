@@ -1,6 +1,5 @@
 <div class="center">
-<h1>Edit </h1> 
- 
+
 
 <h1 class="new_field">Edit Eatery</h1>
 <%= form_for @eatery do |f| %>
@@ -25,8 +24,8 @@
 <% end %>
 
  
-<%= link_to "Index", eateries_path %>
-<%= link_to "Delete", @eatery, method: "delete" %> 
-<%= link_to "New", new_eatery_path %>
+<p><%= link_to "All Eateries", eateries_path %></p>
+<p><%= link_to "Delete", @eatery, method: "delete" %></p> 
+<p><%= link_to "New", new_eatery_path %></p>
 
 </div>

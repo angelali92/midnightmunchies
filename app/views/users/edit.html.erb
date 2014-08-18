@@ -13,19 +13,20 @@
         </div>
       <% end %>
 
+      <div class="center">
+        <p><%= f.label :email %>
+        <p><span class="new_input"><%= f.text_field :email %><br/></span>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %><br/>
+        <p><%= f.label :password %>
+        <p><span class="new_input"><%= f.password_field :password, value: "" %><br/></span>
 
-      <%= f.label :password %>
-      <%= f.text_field :password, value: "" %><br/>
+        <p><%= f.label :password_confirmation %>
+        <p><span class="new_input"><%= f.password_field :password_confirmation, value: ""%><br/></span>
 
-      <%= f.label :password_confirmation %>
-      <%= f.text_field :password_confirmation, value: ""%><br/>
-
-      <%= f.submit "Update yourself", class: "btn btn-large btn-primary" %>
+        <p class="center"><%= f.submit "Update yourself", class: "btn btn-large btn-primary" %> <br/>
+      </div>
     <% end %>
 
-    <p><%= link_to "Cancel", @user %></p>
+    <p class="center"><%= link_to "Cancel", @user %></p>
   </div>
 </div>
