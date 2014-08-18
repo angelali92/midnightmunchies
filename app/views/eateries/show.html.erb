@@ -1,52 +1,6 @@
 <div class="container-fluid main">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="font-size:40px">
-			<div>
-	    		<%= @eatery.name %> 
-	   			<br>
-	    		<%= link_to(@eatery.website, target: '_blank') do %>
-  					<%= image_tag(@eatery.image_url, width: '100%', alt: 'Image Url') %>
-				<% end %>
-  			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-			<div>
-				<strong>Address:</strong>
-				<p> <%= @eatery.address %> </p>
-				<p> <%= @eatery.map_url %> </p>
-				<br>
-		  	</div>
-		</div>
-		<div class="col-xs-6 col-sm-3 col-md-2">
-		  	<div>
-	    		<strong>Phone Number:</strong>
-	   			<%= @eatery.phone_num %>
-	   			<br>
-  			</div>
-		</div>
-		
-		<div class="col-xs-6 col-sm-3 col-md-2">
-		 	<div>
-			   <strong>Rating:</strong>
-			    <% if @eatery.rating.to_i > 0 %> 
-				    <% @eatery.rating.to_i.times do |i| %>
-				    	s
-				    <% end %> 
-			    <% else %>
-			     	No Rating
-			    <% end %>
-		  	</div>
-			</div>
-		<div class="col-xs-6 col-sm-3 col-md-2">
-			<div>
-			    <strong>Drive Thru:</strong>
-			     <% if @eatery.drive_thru %> 
-			     	Yes
-			     <% else %>
-			     	No
-			     <% end %>
-		  	</div>
-		</div>
+		<%= render "eateries/show" %>
 	</div>
 
 <!-- <div class="map">

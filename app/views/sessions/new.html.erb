@@ -1,13 +1,15 @@
 <div class="row">
   <!-- <div class="span6 offset3"> -->
   
-  <div class="search"> 
+<!--   <div class="search"> 
       <form role="Enter Location">
           <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Location">
           </div>
       </form>
-  </div> 
+  </div>  -->
+
+  <br/><br/><h2 class="center"> Sign into your account </h2><br/>
 
   <div class="box">
   <%= form_for(:session, url: signin_path) do |f| %>
@@ -18,7 +20,7 @@
 
 
       <div class="form-group">
-        <%= f.text_field :password, :placeholder => "Enter Password", style: "width:100%;" %><br/>
+        <%= f.password_field :password, :placeholder => "Enter Password", style: "width:100%;" %><br/>
       </div>
 
       <%= f.submit "Sign In", class: "btn btn-large btn-primary" %>

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// Hearts & Stars Hover on index page.
-	$("tBody tr").hover(
+	$(".tBody").hover(
 		function() {
 			$(this).find(".glyphicon-star").addClass("glyphicon-star-hover");
 			$(this).find(".glyphicon-heart").addClass("glyphicon-heart-hover");

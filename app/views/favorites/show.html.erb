@@ -1,9 +1,14 @@
 <h1>Name: <%= @favorite.name %></h1>
 <h1>Description: <%= @favorite.description %></h1>
-<h1>User ID: <%= @favorite.user_id %></h1>
-<h1>Eatery ID: <%= @favorite.eatery_id %></h1>
+<hr/>
+
+<%=render 'eateries/show'%>
+
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 <p><%= link_to "Delete Your Account", @favorite, method: 'delete' %></p>
 <p><%= link_to "See Eateries Close to Me", eateries_path %></p>
 <p><%= link_to "Sign Out", signout_path , method: "delete" %><p> 
 
+</div>

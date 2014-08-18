@@ -31,6 +31,7 @@ class FavoritesController < ApplicationController
 
 	def show
 		@favorite = Favorite.find(params[:id])
+		@eatery = Eatery.find(@favorite.eatery_id)
 	end
 
 	# Delete a favorite eatery.

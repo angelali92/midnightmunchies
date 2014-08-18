@@ -20,11 +20,10 @@
 		  		<div class="navbar logos"> 
 		  			<%= link_to(eateries_path) do %>
   						<%= image_tag("https://s3.amazonaws.com/uploads.hipchat.com/140618/1019233/tqhnDjPhsOFYT8G/Logo_Big.png", height: '100%') %>
+						<img class="settings" src="https://cdn3.iconfinder.com/data/icons/setting/100/settings_gear_1-512.png"/>
 					<% end %>	
 					<%= link_to "idnight Munchies", eateries_path %>
 				</div>
-
-					
 
 			</div><!-- end div.container-fluid -->
 		</nav>
@@ -32,11 +31,12 @@
 	<!-- End Bootstrap Nav Bar -->
 
 		<div class="page-wrap">
+			<div class="space"></div>
 			<%= yield %>
 		</div>
 
-		<footer class="site-footer">
-					<img class="settings" src="https://cdn3.iconfinder.com/data/icons/setting/100/settings_gear_1-512.png"/>
+		
+		<footer class="site-footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		</footer>
 
 

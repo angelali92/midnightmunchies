@@ -57,8 +57,11 @@ NAVBAR
 }
 
 .navbar{  
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 	background-color: #f88c43;
-	margin-top: -3%;
+	margin-top: -7%;
 	font-family: 'Righteous';
 	font-size: 12px;
 }
@@ -73,6 +76,7 @@ NAVBAR
 }
 
 .page-wrap {
+	padding-top: 150px;
 	margin: 3%;
 	min-height: 100%;
 	/* equal to footer height */
@@ -96,11 +100,10 @@ NAVBAR
 
 }
 .settings{
-	width: 90px;
-	padding-top: 15px;
-	padding-right: 10px;
-	padding-left: 10px;
+	width: 70px;
+	padding: 15px;
 	float:right;
+	margin-top: 18px;
 }
 
 .pic_text {
@@ -112,12 +115,11 @@ NAVBAR
 }
 
 .logos {
-	width:400px;
+	/*width:400px;*/
 	margin-top: 5%;
-	padding-bottom: 1%;
 	height:100px;
 	position: relative;
-	margin-left: auto;
+	/*margin-left: auto;*/
 	margin-right: auto;
 	font-size:30px;
 }
@@ -137,8 +139,6 @@ NAVBAR
 	clear: both;
 	color: #474747;
 }
-
-
 
 /*arrows for the column filter*/
 .pretty th .current {
@@ -166,9 +166,16 @@ NAVBAR
 }
 
 
+/* Responsive CSS */
 
-
-
+@media screen and (max-width: 430px) {
+	.logos {
+		font-size:15px;
+	}
+	.settings{
+		width: 60px;
+	}
+}
 
 
 
