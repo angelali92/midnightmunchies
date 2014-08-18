@@ -31,7 +31,7 @@
          <strong>Rating:</strong>
           <% if @eatery.rating.to_i > 0 %> 
             <% @eatery.rating.to_i.times do |i| %>
-              s
+              <span class="glyphicon glyphicon-star"></span>
             <% end %> 
           <% else %>
             No Rating

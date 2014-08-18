@@ -1,27 +1,31 @@
 <h1 class="main"> Favorites </h1> 
 
-<table>
+
+
+<div class="table-responsive col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <table class="table table-hover" width="100%">
+
     <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Eatery Name</th>
-        </tr>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Eatery</th>
+        
+      </tr>
     </thead>
 
     <tbody>
-        <% @favorites.each do |fav| %>
-            <tr>
-                <td><%= fav.name %></td>
-                <td><%= fav.description %></td>
-                <td><%= Eatery.find(fav.eatery_id).name %></td>
-                <td><%= link_to "Show", fav %></td>
-                <td><%= link_to "Remove From Favorites", fav, method: "delete" %></td>
-            </tr>
-        <% end %>
+
+       <% @favorites.each do |fav| %>
+         <tr class="tBody">
+            <td><%= fav.name %></td>
+            <td><%= fav.description %></td>
+            <td><%= link_to "Show", fav %></td>
+            <td><%= link_to "Remove From Favorites", fav, method: "delete" %></td>
+        </tr>
+      <% end %>
+
     </tbody>
-</table>
 
-
-<p><%= link_to "My Account", signin_path %></p>
-<p><%= link_to "Sign Out", signout_path , method: "delete" %><p> 
+  </table>
+</div> 
