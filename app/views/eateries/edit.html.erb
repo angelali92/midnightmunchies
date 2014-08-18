@@ -1,29 +1,30 @@
 <div class="center">
 <h1>Edit </h1> 
-
  
 
-<h1>Edit Eatery</h1>
+<h1 class="new_field">Edit Eatery</h1>
 <%= form_for @eatery do |f| %>
-	<%= f.label :name %> <br/>
-	<%= f.text_field :name %> <br/>
-	<%= f.label :image_url %> <br/>
-	<%= f.text_field :image_url %> <br/>
-	<%= f.label :address %> <br/>
-	<%= f.text_field :address %> <br/>
-	<%= f.label :phone_num %> <br/>
-	<%= f.text_field :phone_num %> <br/>
-	<%= f.label :website %> <br/>
-	<%= f.number_field :website %> <br/>
-	<%= f.label :rating %> <br/>
-	<%= f.number_field :rating %> <br/>
-	<%= f.label :drive_thru %> <br/>
-	<%= f.text_field :drive_thru %> <br/>
-	<%= f.submit "Change the Eatery" %>
+  <div class="new_field"><%= f.label :name %>: </div>
+  <div class="new_input"><%= f.text_field :name %><br/> </div>
+  <div class="new_field"><%= f.label :image_url %> </div>
+  <div class="new_input"><%= f.text_field :image_url %> <br/> </div>
+  <div class="new_field"><%= f.label :address %>: </div>
+  <div class="new_input"><%= f.text_field :address %><br/> </div>
+  <div class="new_field"><%= f.label :phone_num %>: </div>
+  <div class="new_input"><%= f.text_field :phone_num %><br/>  </div>
+  <div class="new_field"><%= f.label :website %>: </div>
+  <div class="new_input"><%= f.text_field :website %><br/>  </div>
+  <div class="new_field"><%= f.label :rating %>: </div>
+  <div class="new_input"><%= f.text_field :rating %><br/>  </div>
+  <div class="new_field"><%= f.label :drive_thru %>: </div>
+  <div class="new_input"><%= f.text_field :drive_thru %><br/>  </div>
+  <div class="new_field"><%= f.label :map_url %>: </div>
+  <div class="new_input"><%= f.text_field :map_url %><br/>  </div>
+  <br/>
+  <div id="sub_input"> <%= f.submit %></div> <br/>
+<% end %>
 
-<%end %>
-
-
+ 
 <%= link_to "Index", eateries_path %>
 <%= link_to "Delete", @eatery, method: "delete" %> 
 <%= link_to "New", new_eatery_path %>

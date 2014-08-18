@@ -2,7 +2,7 @@ class EateriesController < ApplicationController
 	helper_method :sort_column, :sort_direction
 
 	def index
-		@eateries = Eatery.order(sort_column + " " + sort_direction)
+		@eateries = Eatery.search(params[:search]).order(sort_column + " " + sort_direction)
 		@asc = "http://www.clipartbest.com/cliparts/nTX/EGB/nTXEGBLTB.png"
 		@desc = "http://upload.wikimedia.org/wikipedia/en/e/e0/Black_Down_Arrow.png"
 	end

@@ -2,7 +2,14 @@
 
 <h1 class="main"> Eateries </h1> 
 
-
+<%= form_tag eateries_path, :method => 'get' do %>
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+  <p class="search">
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 
 <div class="table-responsive">
   <table class="table table-hover" width="100%">
