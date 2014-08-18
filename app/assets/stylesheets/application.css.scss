@@ -36,6 +36,17 @@ html, body {
 	color: #d1d1d1;
 	font-size: 1.1em;
 }
+
+/* Helper class: Centering things */
+.center {
+	text-align: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* End Helper Class */
+
 /*************************************
 NAVBAR
 ************************************/

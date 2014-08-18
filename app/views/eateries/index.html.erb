@@ -34,7 +34,7 @@
           <td>
               <% if eatery.rating.to_i > 0 %> 
                 <% eatery.rating.to_i.times do |i| %>
-                  s
+                  <span class="glyphicon glyphicon-star"></span>
                 <% end %> 
               <% else %>
                 No Rating
@@ -47,9 +47,11 @@
               No
              <% end %>
           </td>
-          <td><%= link_to "View", eatery %></td>
-          <td><%= link_to "Edit", edit_eatery_path(eatery) %></td>
-          <td><%= link_to "Favorite", new_favorite_path(eatery) %></td>
+          <td>
+            <%= link_to(new_favorite_path(eatery)) do %>
+              <span class="glyphicon glyphicon-heart"></span>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

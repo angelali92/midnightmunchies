@@ -5,6 +5,24 @@
 	color: #D1D1D1;
 }
 
+.glyphicon-star {
+	font-size: 1em;
+}
+
+.glyphicon-star-hover {
+	color: #FFD000;
+	text-shadow: 2px 2px #B39200;
+}
+
+.glyphicon-heart {
+	font-size: 2em;
+}
+
+.glyphicon-heart-hover {
+	color: #DE0000;
+	text-shadow: 2px 2px #910000;
+}
+
 @media screen and (min-width: 200px) {
 	.eatery-logo {
 		width: 40px;

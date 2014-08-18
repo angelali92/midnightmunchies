@@ -1,5 +1,59 @@
 <div class="row">
   <div class="span6 offset3">
+
+    <!-- Show Eatery you are favoriting -->
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="font-size:40px">
+      <div>
+          <%= @eatery.name %> 
+          <br>
+          <%= link_to(@eatery.website, target: '_blank') do %>
+            <%= image_tag(@eatery.image_url, width: '100%', alt: 'Image Url') %>
+        <% end %>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div>
+        <strong>Address:</strong>
+        <p> <%= @eatery.map_url %> </p>
+        <br>
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-2">
+        <div>
+          <strong>Phone Number:</strong>
+          <%= @eatery.phone_num %>
+          <br>
+        </div>
+    </div>
+    
+    <div class="col-xs-6 col-sm-3 col-md-2">
+      <div>
+         <strong>Rating:</strong>
+          <% if @eatery.rating.to_i > 0 %> 
+            <% @eatery.rating.to_i.times do |i| %>
+              s
+            <% end %> 
+          <% else %>
+            No Rating
+          <% end %>
+        </div>
+      </div>
+    <div class="col-xs-6 col-sm-3 col-md-2">
+      <div>
+          <strong>Drive Thru:</strong>
+           <% if @eatery.drive_thru %> 
+            Yes
+           <% else %>
+            No
+           <% end %>
+        </div>
+    </div>
+    <!-- End Show Eatery you are favoriting -->
+
+    <!-- Favorites Form -->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+    <h2> Add <%= @eatery.name %> to Favorites </h2>
+
     <%= form_for @favorite do |f| %>
       <% if @favorite.errors.any? %>
         <div id="error_explanation">
@@ -14,18 +68,21 @@
       <% end %>
 
 
-      <%= f.label :name %>
+      <%= f.label :name, :value => @eatery.name %>:<br/>
       <%= f.text_field :name %><br/>
 
-      <%= f.label :description %>
-      <%= f.text_field :description %><br/>
+      <%= f.label :description %>:<br/>
+      <%= f.text_field :description %><br/><br/>
 
       <%= f.hidden_field :user_id, :value => @user_id%>
       <%= f.hidden_field :eatery_id, :value => @eatery_id %>
 
-      <%= f.submit "Add To Favorites", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Add To Favorites", class: "btn btn-large btn-primary" %><br/>
     <% end %>
     
-    <p><%= link_to "Cancel", favorites_path %></p>
+    <p><%= link_to "Cancel", eateries_path %></p>
+
+    </div>
+    <!-- End Favorites Form -->
   </div>
 </div>

@@ -7,9 +7,14 @@ class FavoritesController < ApplicationController
 
 	# Create a new favorite
 	def new
-		@favorite = Favorite.new
-		@eatery_id = params[:format]
-		@user_id = current_user.id
+		if signed_in?
+			@eatery = Eatery.find(params[:format])
+			@favorite = Favorite.new
+			@eatery_id = params[:format]
+			@user_id = current_user.id
+		else
+			redirect_to signin_path
+		end
 	end
 
 	# Create the favorite
