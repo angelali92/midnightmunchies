@@ -20,9 +20,17 @@
 		  		<div class="navbar logos"> 
 		  			<%= link_to(eateries_path) do %>
   						<%= image_tag("https://s3.amazonaws.com/uploads.hipchat.com/140618/1019233/tqhnDjPhsOFYT8G/Logo_Big.png", height: '100%') %>
-						<img class="settings" src="https://cdn3.iconfinder.com/data/icons/setting/100/settings_gear_1-512.png"/>
 					<% end %>	
 					<%= link_to "idnight Munchies", eateries_path %>
+
+					<%= link_to(signin_path) do %>
+					<img id="settings" src="https://cdn3.iconfinder.com/data/icons/setting/100/settings_gear_1-512.png"/>
+					<% end %>	
+
+					<%= link_to(new_eatery_path) do %>
+						<span id="add-eatery" class="glyphicon glyphicon-plus"/>
+					<% end %>	
+
 				</div>
 
 			</div><!-- end div.container-fluid -->
@@ -31,10 +39,8 @@
 	<!-- End Bootstrap Nav Bar -->
 
 		<div class="page-wrap">
-			<div class="space"></div>
 			<%= yield %>
 		</div>
-
 		
 		<footer class="site-footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		</footer>

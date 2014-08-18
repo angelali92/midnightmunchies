@@ -12,8 +12,12 @@ class EateriesController < ApplicationController
 	end
 
 
-	def new
-		@eatery = Eatery.new
+	def new	
+		if signed_in?
+			@eatery = Eatery.new
+		else
+			redirect_to signin_path
+		end
 	end
 
 	def create

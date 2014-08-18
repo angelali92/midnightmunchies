@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817000417) do
+ActiveRecord::Schema.define(version: 20140818035105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140817000417) do
     t.float    "lat"
     t.float    "long"
     t.string   "lobby_hours"
-    t.string   "map_url"
+    t.text     "map_url"
   end
 
   create_table "favorites", force: true do |t|

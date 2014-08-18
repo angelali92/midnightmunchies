@@ -1,21 +1,24 @@
     <!-- Show Eatery you are favoriting -->
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="font-size:40px">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" style="font-size:40px">
       <div>
           <%= @eatery.name %> 
-          <br>
+          <br/>
           <%= link_to(@eatery.website, target: '_blank') do %>
             <%= image_tag(@eatery.image_url, width: '100%', alt: 'Image Url') %>
-        <% end %>
+          <% end %>
+          <br/>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <div>
         <strong>Address:</strong>
-        <p> <%= @eatery.map_url %> </p>
+        <p> <%= @eatery.address %> </p>
         <br>
+        <iframe src=<%= @eatery.map_url %>> </iframe>
         </div>
+        <br/>
     </div>
-    <div class="col-xs-6 col-sm-3 col-md-2">
+    <div class="col-xs-6 col-sm-4 col-md-4">
         <div>
           <strong>Phone Number:</strong>
           <%= @eatery.phone_num %>
@@ -23,7 +26,7 @@
         </div>
     </div>
     
-    <div class="col-xs-6 col-sm-3 col-md-2">
+    <div class="col-xs-6 col-sm-4 col-md-4">
       <div>
          <strong>Rating:</strong>
           <% if @eatery.rating.to_i > 0 %> 
@@ -43,6 +46,7 @@
            <% else %>
             No
            <% end %>
-        </div>
+      </div>
     </div>
+    <br/>
     <!-- End Show Eatery you are favoriting -->
