@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row"> 
   <div class="span6 offset3">
 
     <!-- Show Eatery you are favoriting -->
@@ -69,10 +69,10 @@
 
 
       <%= f.label :name, :value => @eatery.name %>:<br/>
-      <%= f.text_field :name %><br/>
+      <span class="new_input"><%= f.text_field :name %><br/></span>
 
       <%= f.label :description %>:<br/>
-      <%= f.text_field :description %><br/><br/>
+      <span class="new_input"><%= f.text_field :description %><br/><br/></span>
 
       <%= f.hidden_field :user_id, :value => @user_id%>
       <%= f.hidden_field :eatery_id, :value => @eatery_id %>

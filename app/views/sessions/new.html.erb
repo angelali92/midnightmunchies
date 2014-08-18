@@ -13,12 +13,12 @@
   <%= form_for(:session, url: signin_path) do |f| %>
       <br>
       <div class="form-group">
-        <%= f.text_field :email, :placeholder => "Enter Email", style: "width:100%;" %><br/>
+        <span class="new_input"><%= f.text_field :email, :placeholder => "Enter Email", style: "width:100%;" %><br/></span>
       </div> 
 
 
       <div class="form-group">
-        <%= f.text_field :password, :placeholder => "Enter Password", style: "width:100%;" %><br/>
+        <span class="new_input"><%= f.text_field :password, :placeholder => "Enter Password", style: "width:100%;" %><br/></span>
       </div>
 
       <%= f.submit "Sign In", class: "btn btn-large btn-primary" %>
@@ -26,4 +26,4 @@
   <p style="clear:both;"><%= link_to "New user?", signup_path %></p> 
   </div> 
 
-</div>
+</div> 

@@ -13,7 +13,7 @@ eateries = Eatery.create([
     {name:"Norms's Restaurant", image_url:"http://s3-media4.fl.yelpcdn.com/bphoto/I4IGvmYS6_wUozIbN6-Y_Q/l.jpg", address:"2150 Harbor Blvd Costa Mesa, CA 92627", phone_num:"(949) 631-0505", website:"http://www.yelp.com/biz/norms-restaurant-costa-mesa", rating:"3", drive_thru:"false"}, 
     {name:"Alejandro's", image_url:"http://s3-media2.fl.yelpcdn.com/bphoto/IzWI2QvoKuYCdy6R6npWqA/l.jpg", address:"801 W 19th St Costa Mesa, CA 92627", phone_num:"(949) 631-2561", website:"http://www.yelp.com/biz/alejandros-mexican-food-costa-mesa", rating:"5", drive_thru:"true"}, 
     {name:"Donut Star", image_url:"http://s3-media1.fl.yelpcdn.com/bphoto/QNYVkQ17jFBE_7nXlUEjJQ/l.jpg", address:"5365 Alton Pkwy Ste C Irvine, CA 92604", phone_num:"(949) 551-9744", website:"http://www.yelp.com/biz/donut-star-irvine-2", rating:"4", drive_thru:"false"}, 
-    {name:"McDonald’s", image_url:"http://s3-media3.fl.yelpcdn.com/bphoto/uVdRSSFqgDbFGKsKYWzl6A/l.jpg", address:"5445 Alton Pkwy Irvine, CA 92604", phone_num:"(949) 551-4700", website:"http://www.yelp.com/biz/mcdonalds-irvine-8", rating:"3", drive_thru:"false"
-}])
+    {name:"McDonald’s", image_url:"http://s3-media3.fl.yelpcdn.com/bphoto/uVdRSSFqgDbFGKsKYWzl6A/l.jpg", address:"5445 Alton Pkwy Irvine, CA 92604", phone_num:"(949) 551-4700", website:"http://www.yelp.com/biz/mcdonalds-irvine-8", rating:"3", drive_thru:"false"}
+])
 
 
