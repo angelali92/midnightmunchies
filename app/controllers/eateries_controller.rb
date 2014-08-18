@@ -6,7 +6,7 @@ class EateriesController < ApplicationController
 		@asc = "http://www.clipartbest.com/cliparts/nTX/EGB/nTXEGBLTB.png"
 		@desc = "http://upload.wikimedia.org/wikipedia/en/e/e0/Black_Down_Arrow.png"
 	end
-
+ 
 	def show	
 		@eatery = Eatery.find(params[:id])
 	end
